@@ -8,12 +8,14 @@ public class HUD_Controller : MonoBehaviour {
 
 	public RectTransform healthBar;
 	private Text rocksText;
+	private Text twigsText;
 	private float maxXVal;
 
 	// Use this for initialization
 	void Start () {
 		//healthBar = (RectTransform)(transform.GetChild (0).GetChild (0).GetChild (0).GetChild (0).GetChild (0));
-		rocksText = gameObject.GetComponentInChildren<Text> ();
+		rocksText = gameObject.GetComponentsInChildren<Text> ()[0];
+		twigsText = gameObject.GetComponentsInChildren<Text> ()[1];
 		maxXVal = healthBar.position.x;
 	}
 	
@@ -21,6 +23,7 @@ public class HUD_Controller : MonoBehaviour {
 	void Update () {
 		UpdateHealth ();
 		UpdateRocks ();
+		UpdateTwigs ();
 	}
 
 	void UpdateHealth () {
@@ -31,6 +34,10 @@ public class HUD_Controller : MonoBehaviour {
 
 	void UpdateRocks () {
 		rocksText.text = "" + player.rockCount;
+	}
+
+	void UpdateTwigs () {
+		twigsText.text = "" + player.twigCount;
 	}
 		
 }
