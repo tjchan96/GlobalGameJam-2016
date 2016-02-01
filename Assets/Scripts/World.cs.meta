@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: e86926d354f24fb43bec65ac63e773f6
+timeCreated: 1454281361
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - grassTile: {instanceID: 0}
+  - grass2Tile: {instanceID: 0}
+  - grass3Tile: {instanceID: 0}
+  - dirtTile: {fileID: 128316, guid: 315a3ff1e667df748aa85ee3a2db5367, type: 2}
+  - dirt2Tile: {instanceID: 0}
+  - boulder: {instanceID: 0}
+  - tree: {instanceID: 0}
+  - spawner: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
