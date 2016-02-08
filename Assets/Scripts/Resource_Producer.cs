@@ -33,7 +33,7 @@ public class Resource_Producer : MonoBehaviour {
 				float randomRadius = Random.Range (0, radius);
 				float randomAngle = Random.Range (0, 2 * Mathf.PI);
 				Vector2 rand = new Vector2 (randomRadius * Mathf.Cos (randomAngle), randomRadius * Mathf.Sin (randomAngle));
-				Vector3 point = new Vector3 (rand.x + transform.position.x, rand.y + transform.position.y, transform.position.z);
+				Vector3 point = new Vector3 (rand.x + transform.position.x, rand.y + transform.position.y, oldPosition.z - 1);
 				GameObject resourceCopy = Instantiate (resource, point, Quaternion.identity) as GameObject;
 				Resource_Selector resource_selector = resourceCopy.GetComponent<Resource_Selector> () as Resource_Selector;
 				resource_selector.index = Random.Range (2, resource_selector.index);
